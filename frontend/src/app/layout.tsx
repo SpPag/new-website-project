@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nick the Greek",
+  title: "Nick's Guitar Lessons",
   description: "music, lessons, guitar",
 };
 
