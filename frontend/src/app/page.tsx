@@ -1,3 +1,6 @@
+import { Introduction } from "../components/Introduction";
+import { VideoSection } from "../components/VideoSection";
+
 export default function Home() {
 	return (
 		<div className="h-screen relative">
@@ -14,6 +17,12 @@ export default function Home() {
 			<div className="relative z-10 text-zinc-800 flex flex-col items-center pt-8 text-3xl text-white font-sans">
 				Nick's Guitar Lessons
 			</div>
+
+			<div className="flex space-x-4 mx-4">
+				<Introduction />
+				<VideoSection />
+			</div>
+
 		</div>
 	);
 }
