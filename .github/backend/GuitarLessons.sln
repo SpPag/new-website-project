@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{827E0CD3-B72D-47B6-A68D-7590B98EB39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarLessons.Infrastructure", "src\GuitarLessons.Infrastructure\GuitarLessons.Infrastructure.csproj", "{D741435E-48CF-54CA-1189-92AD6E6D68FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarLessons.Application", "src\GuitarLessons.Application\GuitarLessons.Application.csproj", "{50837780-4DFC-18A1-0C87-5DA6617F6544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarLessons.Domain", "src\GuitarLessons.Domain\GuitarLessons.Domain.csproj", "{B4B9D436-E5AB-7E65-8DCE-60B1AD0A2503}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarLessons.Api", "src\GuitarLessons.Api\GuitarLessons.Api.csproj", "{9196015C-CB20-633D-F8D2-46826DDFD412}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D741435E-48CF-54CA-1189-92AD6E6D68FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D741435E-48CF-54CA-1189-92AD6E6D68FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D741435E-48CF-54CA-1189-92AD6E6D68FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D741435E-48CF-54CA-1189-92AD6E6D68FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50837780-4DFC-18A1-0C87-5DA6617F6544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50837780-4DFC-18A1-0C87-5DA6617F6544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50837780-4DFC-18A1-0C87-5DA6617F6544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50837780-4DFC-18A1-0C87-5DA6617F6544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B9D436-E5AB-7E65-8DCE-60B1AD0A2503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B9D436-E5AB-7E65-8DCE-60B1AD0A2503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B9D436-E5AB-7E65-8DCE-60B1AD0A2503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B9D436-E5AB-7E65-8DCE-60B1AD0A2503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9196015C-CB20-633D-F8D2-46826DDFD412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9196015C-CB20-633D-F8D2-46826DDFD412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9196015C-CB20-633D-F8D2-46826DDFD412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9196015C-CB20-633D-F8D2-46826DDFD412}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA3D0B6F-EE55-4146-AFC8-59902449B244}
+	EndGlobalSection
+EndGlobal
