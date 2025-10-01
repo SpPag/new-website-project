@@ -38,7 +38,7 @@ const VideoSection = () => {
 		// Use this if you want to embed a Vimeo video
 
 		<div className="
-			relative z-10 w-1/2 mt-8
+			relative z-10 w-1/3 mt-8
 			aspect-video rounded-xl overflow-hidden
 			">
 			<ReactPlayer

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -29,14 +30,7 @@ export default function RootLayout({
 			>
 				{children}
 				{/* Contact info pinned to bottom, feel free to comment this out if you want to switch to having it only in the 'contact' page */}
-				{/* <div className="absolute bottom-8 left-0 w-full flex justify-center z-20 text-zinc-800">
-					<div className="mr-4">
-						Email: <a href="mailto:whodis@example.com">whodis@example.com</a>
-					</div>
-					<div>
-						Τηλέφωνο: <a href="tel:+1234567890">+30 123 456 7890</a>
-					</div>
-				</div> */}
+				<Footer />
 			</body>
 		</html>
 	);

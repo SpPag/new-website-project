@@ -8,12 +8,12 @@ export default function HomePage() {
 		<div className="h-screen relative">
 			{/* Background image */}
 			<div
-				className="absolute inset-0 bg-cover bg-center"
-				style={{ backgroundImage: "url('/bg_v1.jpg')" }}
+				className="absolute inset-0 bg-cover bg-center dark:brightness-160"
+				style={{ backgroundImage: "url('/bg4.jpg')" }}
 			/>
 
 			{/* Semi-transparent overlay */}
-			<div className="absolute inset-0 bg-white/40 dark:bg-black/20"></div>
+			<div className="absolute inset-0 dark:bg-black/50"></div>
 
 			{/* Title */}
 			<div className="relative z-10 text-zinc-800 dark:text-zinc-200 flex flex-col items-center pt-8 text-3xl font-sans">
@@ -27,7 +27,7 @@ export default function HomePage() {
 			</div>
 
 			{/* Main content */}
-			<div className="flex space-x-4 mx-4">
+			<div className="flex flex-col space-x-4 mx-4 items-center">
 				<Introduction />
 				<VideoSection />
 			</div>

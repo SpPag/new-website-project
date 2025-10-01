@@ -9,11 +9,11 @@ export default function LessonsPage() {
 			{/* Background image */}
 			<div
 				className="absolute inset-0 bg-cover bg-center"
-				style={{ backgroundImage: "url('/bg_v1.jpg')" }}
+				style={{ backgroundImage: "url('/bg3.jpg')" }}
 			/>
 
 			{/* Semi-transparent overlay */}
-			<div className="absolute inset-0 bg-white/40 dark:bg-black/20"></div>
+			<div className="absolute inset-0 bg-white/40 dark:bg-black/25"></div>
 
 			{/* Home button */}
 			<div className="z-20 absolute top-2 left-6 mt-4 dark:text-zinc-200 flex">
