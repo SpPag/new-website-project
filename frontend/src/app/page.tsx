@@ -13,15 +13,15 @@ export default function HomePage() {
 			/>
 
 			{/* Semi-transparent overlay */}
-			<div className="absolute inset-0 bg-white/30"></div>
+			<div className="absolute inset-0 bg-white/40 dark:bg-black/20"></div>
 
 			{/* Title */}
-			<div className="relative z-10 text-zinc-800 flex flex-col items-center pt-8 text-3xl font-sans">
+			<div className="relative z-10 text-zinc-800 dark:text-zinc-200 flex flex-col items-center pt-8 text-3xl font-sans">
 				Nick's Guitar Lessons
 			</div>
 
 			{/* Contact and lessons button */}
-			<div className="z-10 absolute top-2 right-6 mt-4 text-white flex space-x-2">
+			<div className="z-10 absolute top-2 right-6 mt-4 dark:text-zinc-200 flex space-x-2">
 				<ContactButton />
 				<LessonsButton />
 			</div>
