@@ -6,8 +6,7 @@ const VideoSection = () => {
 		// Use this if you have a local video file (e.g., MP4) in your public folder
 
 		// <div className="
-		// 	relative z-10 w-1/2
-		// 	mt-8
+		// 	relative z-10 w-1/2 mt-8
 		// 	">
 		// 	<video
 		// 		className="w-full rounded-xl"
@@ -25,8 +24,7 @@ const VideoSection = () => {
 
 		// <iframe
 		// 	className="
-		// 	relative z-10 w-1/2
-		// 	mt-8
+		// 	relative z-10 w-1/2 mt-8
 		// 	aspect-video rounded-xl
 		// 	"
 		// 	src="https://www.youtube.com/embed/du-TY1GUFGk?rel=0"
@@ -40,8 +38,7 @@ const VideoSection = () => {
 		// Use this if you want to embed a Vimeo video
 
 		<div className="
-			relative z-10 w-1/2
-			mt-8
+			relative z-10 w-1/2 mt-8
 			aspect-video rounded-xl overflow-hidden
 			">
 			<ReactPlayer
