@@ -8,12 +8,19 @@ const Introduction = () => {
 	
 	return (
 		<div className="
-		relative z-10 w-1/2
-		p-4 mt-8 border-5 border-double rounded-4xl
-		flex flex-col items-center
-		text-xl text-zinc-800
-		font-sans
+		relative z-10 w-1/2 p-8 mt-8
+		border-5 border-double rounded-4xl
+		flex flex-col items-center justify-center
+		text-xl text-zinc-800 font-sans
 		">
+			{/* Top-left corner */}
+			<img src="/note.jpeg" alt="note" className="absolute top-2 left-2 w-10 h-12" />
+			{/* Top-right corner */}
+			<img src="/note.jpeg" alt="note" className="absolute top-2 right-2 w-10 h-12" />
+			{/* Bottom-left corner */}
+			<img src="/note.jpeg" alt="note" className="absolute bottom-2 left-2 w-10 h-12" />
+			{/* Bottom-right corner */}
+			<img src="/note.jpeg" alt="note" className="absolute bottom-2 right-2 w-10 h-12" />
 			<div>{Greeting}</div>
 			<div>{Intro}</div>
 		</div>
