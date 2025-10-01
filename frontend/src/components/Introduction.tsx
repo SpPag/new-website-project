@@ -11,16 +11,16 @@ const Introduction = () => {
 		relative z-10 w-1/2 p-8 mt-8
 		border-5 border-double rounded-4xl
 		flex flex-col items-center justify-center
-		text-xl text-zinc-800 font-sans
+		text-xl text-zinc-800 dark:text-zinc-300 font-sans
 		">
 			{/* Top-left corner */}
-			<img src="/note.jpeg" alt="note" className="absolute top-2 left-2 w-10 h-12" />
+			<img src="/note.jpeg" alt="note" className="absolute top-2 left-2 w-10 h-12 dark:invert  dark:contrast-65" />
 			{/* Top-right corner */}
-			<img src="/note.jpeg" alt="note" className="absolute top-2 right-2 w-10 h-12" />
+			<img src="/note.jpeg" alt="note" className="absolute top-2 right-2 w-10 h-12 dark:invert dark:contrast-65" />
 			{/* Bottom-left corner */}
-			<img src="/note.jpeg" alt="note" className="absolute bottom-2 left-2 w-10 h-12" />
+			<img src="/note.jpeg" alt="note" className="absolute bottom-2 left-2 w-10 h-12 dark:invert dark:contrast-65" />
 			{/* Bottom-right corner */}
-			<img src="/note.jpeg" alt="note" className="absolute bottom-2 right-2 w-10 h-12" />
+			<img src="/note.jpeg" alt="note" className="absolute bottom-2 right-2 w-10 h-12 dark:invert dark:contrast-65" />
 			<div>{Greeting}</div>
 			<div>{Intro}</div>
 		</div>

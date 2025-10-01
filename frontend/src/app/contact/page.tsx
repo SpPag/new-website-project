@@ -1,10 +1,11 @@
 import { HomeButton } from "@/components/HomeButton";
+import { LessonsButton } from "@/components/LessonsButton";
 
 export default function ContactPage() {
 	const greekNa = '\u03bd\u03b1';
 
 	return (
-		<div className="h-screen relative text-zinc-800">
+		<div className="h-screen relative text-zinc-800 dark:text-zinc-200">
 			{/* Background image */}
 			<div
 				className="absolute inset-0 bg-cover bg-center"
@@ -12,23 +13,32 @@ export default function ContactPage() {
 			/>
 
 			{/* Semi-transparent overlay */}
-			<div className="absolute inset-0 bg-white/30"></div>
+			<div className="absolute inset-0 bg-white/40 dark:bg-black/20"></div>
 
 			{/* Home button */}
-			<div className="z-20 absolute top-2 left-6 mt-4 text-white flex">
+			<div className="z-10 absolute top-2 left-6 mt-4 dark:text-zinc-200 flex">
 				<HomeButton />
 			</div>
 
-			{/* Content */}
-			<div className="relative z-10 flex flex-col items-center pt-8 font-sans">
+			{/* Lessons button */}
+			<div className="z-10 absolute top-2 right-6 mt-4 dark:text-zinc-200 flex space-x-2">
+				<LessonsButton />
+			</div>
+
+			{/* Title */}
+			<div className="relative flex flex-col items-center pt-8 font-sans">
 				<div className="text-3xl mb-10">
 					Επικοινωνία
 				</div>
+			</div>
+
+			{/* Contact info */}
+			<div className="relative flex flex-col items-center pt-8 font-sans">
 				<div>
 					Για οποιεσδήποτε απορίες ή πληροφορίες, μη διστάσετε {greekNa} επικοινωνήσετε μαζί μου!
 				</div>
 				<div>
-					Θα χαρώ {greekNa} σας βοηθήσω με ό,τι χρειαστείτε σχετικά με τα μαθήματα κιθάρας. (ιδιαίτερα, ομαδικά, online)
+					Θα χαρώ {greekNa} σας βοηθήσω με ό,τι χρειαστείτε σχετικά με τα μαθήματα κιθάρας (ιδιαίτερα, ομαδικά, online).
 				</div>
 			</div>
 
