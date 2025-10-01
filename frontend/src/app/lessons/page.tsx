@@ -1,5 +1,3 @@
-import { ContactButton } from "@/components/ContactButton";
-import { HomeButton } from "@/components/HomeButton";
 import { LessonCard } from "@/components/LessonCard";
 
 export default function LessonsPage() {
@@ -14,16 +12,6 @@ export default function LessonsPage() {
 
 			{/* Semi-transparent overlay */}
 			<div className="absolute inset-0 bg-white/40 dark:bg-black/25"></div>
-
-			{/* Home button */}
-			<div className="z-20 absolute top-2 left-6 mt-4 dark:text-zinc-200 flex">
-				<HomeButton />
-			</div>
-
-			{/* Contact button */}
-			<div className="z-10 absolute top-2 right-6 mt-4 dark:text-zinc-200 flex space-x-2">
-				<ContactButton />
-			</div>
 
 			{/* Title */}
 			<div className="relative flex flex-col items-center pt-8 font-sans">
