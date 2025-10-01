@@ -8,12 +8,12 @@ export default function ContactPage() {
 		<div className="h-screen relative text-zinc-800 dark:text-zinc-200">
 			{/* Background image */}
 			<div
-				className="absolute inset-0 bg-cover bg-center"
-				style={{ backgroundImage: "url('/bg_v1.jpg')" }}
+				className="absolute inset-0 bg-cover bg-center "
+				style={{ backgroundImage: "url('/bg2.jpg')" }}
 			/>
 
 			{/* Semi-transparent overlay */}
-			<div className="absolute inset-0 bg-white/40 dark:bg-black/20"></div>
+			<div className="absolute inset-0 bg-white/40 dark:bg-black/40"></div>
 
 			{/* Home button */}
 			<div className="z-10 absolute top-2 left-6 mt-4 dark:text-zinc-200 flex">
@@ -41,16 +41,6 @@ export default function ContactPage() {
 					Θα χαρώ {greekNa} σας βοηθήσω με ό,τι χρειαστείτε σχετικά με τα μαθήματα κιθάρας (ιδιαίτερα, ομαδικά, online).
 				</div>
 			</div>
-
-		{/* Contact info pinned to bottom, feel free to uncomment this if you want to switch to having it only here, instead of in the layout */}
-		<div className="absolute bottom-8 left-0 w-full flex justify-center z-10">
-			<div className="mr-4">
-				Email: <a href="mailto:whodis@example.com">whodis@example.com</a>
-			</div>
-			<div>
-				Τηλέφωνο: <a href="tel:+1234567890">+30 123 456 7890</a>
-			</div>
-		</div>
 	</div>
 	);
 }
