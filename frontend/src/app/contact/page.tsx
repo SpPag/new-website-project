@@ -1,6 +1,3 @@
-import { HomeButton } from "@/components/HomeButton";
-import { LessonsButton } from "@/components/LessonsButton";
-
 export default function ContactPage() {
 	const greekNa = '\u03bd\u03b1';
 
@@ -14,16 +11,6 @@ export default function ContactPage() {
 
 			{/* Semi-transparent overlay */}
 			<div className="absolute inset-0 bg-white/40 dark:bg-black/40"></div>
-
-			{/* Home button */}
-			<div className="z-10 absolute top-2 left-6 mt-4 dark:text-zinc-200 flex">
-				<HomeButton />
-			</div>
-
-			{/* Lessons button */}
-			<div className="z-10 absolute top-2 right-6 mt-4 dark:text-zinc-200 flex space-x-2">
-				<LessonsButton />
-			</div>
 
 			{/* Title */}
 			<div className="relative flex flex-col items-center pt-8 font-sans">
