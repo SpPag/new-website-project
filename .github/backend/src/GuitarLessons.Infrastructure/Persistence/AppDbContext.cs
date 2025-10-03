@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GuitarLessons.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace GuitarLessons.Infrastructure.Persistence
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -19,7 +21,7 @@ namespace GuitarLessons.Infrastructure.Persistence
         {
             base.OnModelCreating(modelBuilder);
 
-            // Example: Video.Price precision
+            
             modelBuilder.Entity<Video>()
                 .Property(v => v.Price)
                 .HasColumnType("decimal(18,2)");
