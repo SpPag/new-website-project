@@ -46,7 +46,7 @@ const MenuDropdown = () => {
 				id="dropdownDefaultButton"
 				data-dropdown-toggle="dropdown"
 				className="
-					z-20 text-sm text-center inline-flex items-center px-10 py-2
+					z-20 text-sm text-center inline-flex items-center px-4 py-2 sm:px-8 w-25 sm:w-32 md:w-35
 					bg-sky-400/65 backdrop-blur-xs backdrop-saturate-50 hover:bg-sky-500/65
 					dark:bg-gray-700 dark:backdrop-blur-none dark:backdrop-saturate-none dark:hover:bg-gray-800
 					transition
@@ -61,7 +61,7 @@ const MenuDropdown = () => {
 			</button>
 
 			{dropdownIsOpen && (
-				<div id="dropdown" className="bg-sky-300/55 dark:bg-gray-600 backdrop-blur-xs rounded-xl shadow-xl/20 w-35 border border-black/35 dark:border-zinc-400/35">
+				<div id="dropdown" className="bg-sky-300/55 dark:bg-gray-600 backdrop-blur-xs rounded-xl shadow-xl/20 w-25 sm:w-32 md:w-35 border border-black/35 dark:border-zinc-400/35 text-sm sm:text-md">
 					{menuItems.map((item) => (
 						<DropdownMenuItem
 							key={item.href}
