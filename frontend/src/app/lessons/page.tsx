@@ -3,10 +3,10 @@ import { LessonCard } from "@/components/LessonCard";
 export default function LessonsPage() {
 
 	return (
-		<div className="h-screen relative dark:text-zinc-200">
+		<div className="h-screen relative text-zinc-800 dark:text-zinc-200">
 			{/* Background image */}
 			<div
-				className="absolute inset-0 bg-cover bg-center"
+				className="absolute inset-0 bg-cover bg-center saturate-125"
 				style={{ backgroundImage: "url('/bg3.jpg')" }}
 			/>
 
@@ -14,10 +14,8 @@ export default function LessonsPage() {
 			<div className="absolute inset-0 bg-white/40 dark:bg-black/35"></div>
 
 			{/* Title - could be placed in the layout and display a different title for each page, but for now I'm keeping it here since I don't know if we may need different functionality for some pages */}
-			<div className="relative flex flex-col items-center pt-8 font-sans">
-				<div className="text-3xl mb-10">
-					Μαθήματα
-				</div>
+			<div className="relative flex flex-col items-center pt-8 font-sans text-2xl sm:text-2xl md:text-3xl mb-10 text-zinc-800 dark:text-zinc-200">
+				Μαθήματα
 			</div>
 
 			{/* Lessons */}
