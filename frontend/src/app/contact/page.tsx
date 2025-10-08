@@ -12,7 +12,7 @@ export default function ContactPage() {
 			{/* Semi-transparent overlay */}
 			<div className="absolute inset-0 bg-white/40 dark:bg-black/40"></div>
 
-			{/* Title */}
+			{/* Title - could be placed in the layout and display a different title for each page, but for now I'm keeping it here since I don't know if we may need different functionality for some pages */}
 			<div className="relative flex flex-col items-center pt-8 font-sans">
 				<div className="text-3xl mb-10">
 					Επικοινωνία

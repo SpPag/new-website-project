@@ -47,21 +47,21 @@ const MenuDropdown = () => {
 				data-dropdown-toggle="dropdown"
 				className="
 					z-20 text-sm text-center inline-flex items-center px-10 py-2
-					bg-sky-400/45 backdrop-blur-xs backdrop-saturate-50 hover:bg-sky-400/65
+					bg-sky-400/65 backdrop-blur-xs backdrop-saturate-50 hover:bg-sky-500/65
 					dark:bg-gray-700 dark:backdrop-blur-none dark:backdrop-saturate-none dark:hover:bg-gray-800
 					transition
-					border dark:border-zinc-400 rounded-lg
+					border border-black dark:border-zinc-400 rounded-lg
 					shadow
 					"
 				type="button">
-				Menu
+				Μενού
 				<svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
 					<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
 				</svg>
 			</button>
 
 			{dropdownIsOpen && (
-				<div id="dropdown" className="bg-sky-300/55 dark:bg-gray-600 rounded-lg shadow-xl/20 w-35">
+				<div id="dropdown" className="bg-sky-300/55 dark:bg-gray-600 backdrop-blur-xs rounded-xl shadow-xl/20 w-35 border border-black/35 dark:border-zinc-400/35">
 					{menuItems.map((item) => (
 						<DropdownMenuItem
 							key={item.href}

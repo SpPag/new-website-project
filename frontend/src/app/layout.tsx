@@ -30,6 +30,7 @@ export default function RootLayout({
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				{children}
+				{/* Menu dropdown */}
 				<MenuDropdown />
 				{/* Contact info pinned to bottom, feel free to comment this out if you want to switch to having it only in the 'contact' page */}
 				<Footer />
