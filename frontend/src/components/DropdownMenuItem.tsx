@@ -15,9 +15,10 @@ const DropdownMenuItem = ({ href, label, onClick }: DropdownMenuItemProps) => {
         className="
     		block
     		px-8 py-2
-    		backdrop-blur-xs hover:bg-sky-400/50
+    		hover:bg-sky-400/50
 			dark:backdrop-blur-none dark:backdrop-saturate-100 dark:hover:brightness-90 dark:hover:bg-gray-700
 			transition
+			rounded-xl
         	"
       >
         {label}

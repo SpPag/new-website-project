@@ -11,9 +11,9 @@ export default function HomePage() {
 			/>
 
 			{/* Semi-transparent overlay */}
-			<div className="absolute inset-0 dark:bg-gray-800/50"></div>
+			<div className="absolute inset-0 bg-gray-500/10 dark:bg-gray-800/50"></div>
 
-			{/* Title */}
+			{/* Title - could be placed in the layout and display a different title for each page, but for now I'm keeping it here since I don't know if we may need different functionality for some pages */}
 			<div className="relative z-10 text-zinc-800 dark:text-zinc-200 flex flex-col items-center pt-8 text-3xl font-sans">
 				Nick's Guitar Lessons
 			</div>
