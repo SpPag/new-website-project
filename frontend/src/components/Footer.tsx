@@ -3,7 +3,7 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 
 const Footer = () => {
 	return (
-		<div className="absolute bottom-2 left-0 w-full flex space-x-2 justify-center z-10 text-zinc-800 dark:text-zinc-200 ">
+		<div className="absolute bottom-2 left-0 w-full flex space-x-2 justify-center items-center z-10 text-zinc-800 dark:text-zinc-200 ">
 			{/* Email */}
 			{/* <div className="pr-2">
 				Email: <a href="mailto:whodis@example.com">whodis@example.com</a>
