@@ -1,9 +1,14 @@
 'use client'
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { DropdownMenuItem } from "./DropdownMenuItem";
 
 const MenuDropdown = () => {
+
+	const pathname = usePathname();
+	// don't render the site menu on admin routes
+	if (pathname && pathname.startsWith("/admin")) return null;
 
 	const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
 	const dropdownRef = useRef<HTMLDivElement>(null);
