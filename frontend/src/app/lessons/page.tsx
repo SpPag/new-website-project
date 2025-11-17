@@ -1,4 +1,5 @@
 import { LessonCard } from "@/components/LessonCard";
+import { mockLessons } from "@/data/mockLessons";
 
 export default function LessonsPage() {
 
@@ -20,17 +21,14 @@ export default function LessonsPage() {
 
 			{/* Lessons */}
 			<div className="relative z-10 grid h-[calc(100vh-150px)] overflow-y-auto sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-8">
-				{Array.from({ length: 22 }).map((_, index) => {
-					const randomPrice = Math.floor(Math.random() * 51) + 20; // random between 20 and 70
-					return (
-						<LessonCard
-							key={index}
-							title={`Lesson #${index + 1}`}
-							description={`Description for Lesson #${index + 1}`}
-							price={randomPrice}
-						/>
-					);
-				})}
+				{mockLessons.map((lesson) => (
+					<LessonCard
+						key={lesson.id}
+						title={lesson.title}
+						description={lesson.description}
+						price={lesson.price}
+					/>
+				))}
 			</div>
 		</div>
 	);
