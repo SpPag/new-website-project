@@ -15,6 +15,7 @@ export default function AdminPage() {
 	const [showingToast, setShowingToast] = useState(false);
 	const toastTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 	const removeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+	const [previewLesson, setPreviewLesson] = useState<Lesson | null>(null);
 
 	const handleSave = (lessonData: Omit<Lesson, "id">) => {
 		if (editingLesson) {
@@ -49,6 +50,9 @@ export default function AdminPage() {
 		setEditingLesson(null);
 		setShowModal(false);
 	};
+
+	const openPreviewModal = (lesson: Lesson) => setPreviewLesson(lesson);
+	const closePreviewModal = () => setPreviewLesson(null);
 
 	const openDeleteModal = (lesson: Lesson) => {
 		setLessonToDelete(lesson);
@@ -104,35 +108,51 @@ export default function AdminPage() {
 					{lessons.map((lesson) => (
 						<div
 							key={lesson.id}
-							className="flex justify-between items-center border p-4 rounded overflow-x-auto max-w-full break-words"
+							onClick={() => openPreviewModal(lesson)}   // <-- NEW
+							className="
+										flex flex-col border p-4 rounded max-w-full h-48 cursor-pointer
+										hover:bg-gray-100 dark:hover:bg-gray-700 transition
+									"
 						>
-							<div>
-								<h3 className="font-semibold">{lesson.title}</h3>
-								<p>{lesson.description}</p>
-								<p className="font-bold">${lesson.price}</p>
+							{/* Top Row: Title + Edit/Delete */}
+							<div className="flex justify-between items-start">
+								<h3 className="font-semibold text-lg">{lesson.title}</h3>
+
+								<div className="flex gap-2 ml-4 shrink-0">
+									<button
+										className="bg-blue-500 text-white px-3 py-1 rounded"
+										onClick={(e) => {
+											e.stopPropagation();     // <-- prevents triggering the parent click
+											openModalForEdit(lesson);
+										}}
+									>
+										Edit
+									</button>
+
+									<button
+										className="bg-red-500 text-white px-3 py-1 rounded"
+										onClick={(e) => {
+											e.stopPropagation();     // <-- prevents triggering the parent click
+											openDeleteModal(lesson);
+										}}
+									>
+										Delete
+									</button>
+								</div>
 							</div>
-							<div className="flex gap-2">
-								<button
-									className="bg-blue-500 text-white px-3 py-1 rounded"
-									onClick={() => openModalForEdit(lesson)}
-								>
-									Edit
-								</button>
-								<button
-									className="bg-red-500 text-white px-3 py-1 rounded"
-									onClick={() => openDeleteModal(lesson)}
-								>
-									Delete
-								</button>
+
+							{/* Scrollable Description */}
+							<div className="mt-2 flex-1 overflow-y-auto pr-1">
+								<p className="text-sm break-words">{lesson.description}</p>
 							</div>
+
+							<p className="font-bold mt-2">${lesson.price}</p>
 						</div>
 					))}
-
 				</div>
 			</div>
 
 			{/* New / edit lesson Modal */}
-
 			{showModal && (
 				<div
 					className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
@@ -157,7 +177,6 @@ export default function AdminPage() {
 			)}
 
 			{/* Delete lesson Modal */}
-
 			{showDeleteModal && (
 				<div
 					className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
@@ -190,7 +209,6 @@ export default function AdminPage() {
 			)}
 
 			{/* Toast Notification */}
-
 			{toastMessage && (
 				<div
 					className={`fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg transition-opacity duration-300 ${showingToast ? "opacity-100" : "opacity-0"
@@ -200,6 +218,28 @@ export default function AdminPage() {
 				</div>
 			)}
 
+			{previewLesson && (
+				<div
+					className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+					onClick={closePreviewModal}
+				>
+					<div
+						className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg max-w-md w-full"
+						onClick={(e) => e.stopPropagation()}
+					>
+						<h2 className="text-xl font-bold mb-4">{previewLesson.title}</h2>
+						<p className="mb-4">{previewLesson.description}</p>
+						<p className="font-bold mb-6">${previewLesson.price}</p>
+
+						<button
+							className="text-gray-600 dark:text-gray-300 hover:underline"
+							onClick={closePreviewModal}
+						>
+							Close
+						</button>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 }
