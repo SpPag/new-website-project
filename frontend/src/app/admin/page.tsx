@@ -6,6 +6,7 @@ import { Lesson } from "@/types/Lesson";
 import { LessonForm } from "@/components/LessonForm";
 
 export default function AdminPage() {
+	// State management
 	const [lessons, setLessons] = useState<Lesson[]>(mockLessons);
 	const [editingLesson, setEditingLesson] = useState<Lesson | null>(null);
 	const [showModal, setShowModal] = useState(false);
@@ -17,6 +18,7 @@ export default function AdminPage() {
 	const removeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 	const [previewLesson, setPreviewLesson] = useState<Lesson | null>(null);
 
+	// Functions setup
 	const handleSave = (lessonData: Omit<Lesson, "id">) => {
 		if (editingLesson) {
 			// Update existing lesson
@@ -52,6 +54,7 @@ export default function AdminPage() {
 	};
 
 	const openPreviewModal = (lesson: Lesson) => setPreviewLesson(lesson);
+
 	const closePreviewModal = () => setPreviewLesson(null);
 
 	const openDeleteModal = (lesson: Lesson) => {
@@ -92,9 +95,27 @@ export default function AdminPage() {
 	};
 
 	return (
-		<div className="p-6">
+		<div className="p-6 text-zinc-800 dark:text-zinc-200">
+			{/* Background image */}
+			<div
+				className="absolute inset-0 bg-cover bg-center dark:brightness-80 saturate-100 -z-10"
+				style={{ backgroundImage: "url('/bg1.jpg')" }}
+			/>
+			
+			{/* Semi-transparent overlay */}
+			<div className="absolute inset-0 bg-white/40 dark:bg-black/40 -z-10"></div>
+
+			
 			<button
-				className="bg-green-500 text-white px-4 py-2 rounded mb-4"
+				className="
+					z-20 text-sm text-center flex items-center justify-center py-2 mb-4 sm:w-25 sm:w-32 md:w-35
+					bg-sky-400/65 backdrop-blur-xs backdrop-saturate-50 hover:bg-sky-500/65
+					dark:bg-gray-700 dark:backdrop-blur-none dark:backdrop-saturate-none dark:hover:bg-gray-800
+					transition
+					border border-black dark:border-zinc-400 rounded-lg
+					shadow
+					cursor-pointer
+					"
 				onClick={openModalForNew}
 			>
 				Add New Lesson
@@ -108,9 +129,9 @@ export default function AdminPage() {
 					{lessons.map((lesson) => (
 						<div
 							key={lesson.id}
-							onClick={() => openPreviewModal(lesson)}   // <-- NEW
+							onClick={() => openPreviewModal(lesson)}
 							className="
-										flex flex-col border p-4 rounded max-w-full h-48 cursor-pointer
+										flex flex-col border p-4 rounded max-w-full h-48
 										hover:bg-gray-100 dark:hover:bg-gray-700 transition
 									"
 						>
@@ -120,7 +141,7 @@ export default function AdminPage() {
 
 								<div className="flex gap-2 ml-4 shrink-0">
 									<button
-										className="bg-blue-500 text-white px-3 py-1 rounded"
+										className="bg-blue-500 text-white px-3 py-1 rounded hover:cursor-pointer"
 										onClick={(e) => {
 											e.stopPropagation();     // <-- prevents triggering the parent click
 											openModalForEdit(lesson);
@@ -130,7 +151,7 @@ export default function AdminPage() {
 									</button>
 
 									<button
-										className="bg-red-500 text-white px-3 py-1 rounded"
+										className="bg-red-500 text-white px-3 py-1 rounded hover:cursor-pointer"
 										onClick={(e) => {
 											e.stopPropagation();     // <-- prevents triggering the parent click
 											openDeleteModal(lesson);
