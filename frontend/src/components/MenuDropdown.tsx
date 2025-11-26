@@ -57,12 +57,51 @@ const MenuDropdown = () => {
 					transition
 					border border-black dark:border-zinc-400 rounded-lg
 					shadow
+					cursor-pointer
 					"
 				type="button">
 				Μενού
-				<svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-					<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
-				</svg>
+				{!dropdownIsOpen ? (
+					<svg
+						className="w-2.5 h-2.5 ms-3"
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 10 12"
+					>
+						<path
+							stroke="currentColor"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+							d="M1 2l4 4 4-4"
+						/>
+						<path
+							stroke="currentColor"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+							d="M1 6l4 4 4-4"
+						/>
+					</svg>
+				) : (
+					<svg
+						className="w-2.5 h-2.5 ms-3"
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 10 6"
+					>
+						<path
+							stroke="currentColor"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth="2"
+							d="m1 1 4 4 4-4"
+						/>
+					</svg>
+				)}
+
 			</button>
 
 			{dropdownIsOpen && (
