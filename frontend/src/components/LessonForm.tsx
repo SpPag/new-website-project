@@ -42,7 +42,7 @@ export const LessonForm = ({ lesson, onSave }: LessonFormProps) => {
         min={0}
         required
       />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+      <button type="submit" className="bg-green-400 text-gray-900 hover:bg-green-500 dark:bg-green-700 dark:text-zinc-200 dark:hover:bg-green-600 px-4 py-2 rounded">
         Save
       </button>
     </form>
