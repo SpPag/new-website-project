@@ -252,16 +252,16 @@ export default function AdminPage() {
 						</p>
 						<div className="flex justify-end gap-2">
 							<button
-								onClick={closeDeleteModal}
-								className="px-4 py-2 rounded border hover:bg-sky-200/45 dark:hover:bg-gray-700"
-							>
-								Cancel
-							</button>
-							<button
 								onClick={confirmDelete}
 								className="px-4 py-2 rounded font-bold bg-red-500 text-zinc-800 hover:bg-red-600 dark:bg-red-900 dark:text-zinc-200 dark:hover:bg-red-800"
 							>
 								Delete
+							</button>
+							<button
+								onClick={closeDeleteModal}
+								className="px-4 py-2 rounded border hover:bg-sky-200/45 dark:hover:bg-gray-700"
+							>
+								Cancel
 							</button>
 						</div>
 					</div>
